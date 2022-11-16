@@ -1,0 +1,134 @@
+/* html {
+  scroll-behavior: smooth;
+} */
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.bs-sidebar .nav > .active > ul {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.bg-text{
+  background-color: #f3f3f3;
+}
+
+.bg-text p{
+  font-weight:lighter;
+}
+.bg-text li{
+  font-weight:lighter;
+}
+
+.alturaParaTexto{
+  min-height: 100vh!important;
+  top: 50!important;
+  /* margin-top: 100px; */
+}
+
+.break-word{
+  word-break: break-word;
+}
+
+.nav-link[data-toggle].collapsed:after {
+  content: " ▾";
+}
+
+.nav-link[data-toggle].collapsed:after a {
+  
+}
+
+.nav-link[data-toggle]:not(.collapsed):after {
+  content: " ▴";
+}
+
+.navbarsuperior{
+  height: 57px;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 3px;
+  right: 3px;
+  display: none;
+  height: 40px;
+  width: 40px;
+  padding: 0.25rem!important;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  .position-menu{
+    position: absolute;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .position-menu{
+    position: fixed;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .position-menu{
+    position: fixed;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .position-menu{
+    position: fixed;
+  }
+}
+
+.crop-text-7 {
+  -webkit-line-clamp: 4;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.crop-text-3 {
+  -webkit-line-clamp: 3;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.crop-text-5 {
+  -webkit-line-clamp: 5;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.crop-text-6 {
+  -webkit-line-clamp: 6;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.crop-text-7 {
+  -webkit-line-clamp: 7;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+

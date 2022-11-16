@@ -5,52 +5,881 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.101.0">
   <title>PDS</title>
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
   <!-- Importa o arquivo de css com a estilizacao -->
-  <link href="../style.css" rel="stylesheet">
-  <!-- Importar os js -->
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-  crossorigin="anonymous"></script>
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/ekko-lightbox.css" rel="stylesheet">
+  <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Importar os javascripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/ekko-lightbox.js"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/jquery.min.js"><\/script>')</script>
+  <script src="../assets/js/bootstrap.min.js"></script>
 </head>
 
-<body>
-
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">PDS</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="../index.html">Home </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link " href="../papeis/index.html">Papéis</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  href="../artefatos/index.html">Artefatos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../fluxos/index.html">Fluxos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../ferramentas/index.html">Ferramentas</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div>
-    
+<body class="container-fluid p-0">
+  <div class="navbarsuperior">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="../index.html">PDS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link " href="../papeis/index.html">Papéis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../artefatos/index.html">Artefatos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../fluxos/index.html">Fluxos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../ferramentas/index.html">Ferramentas</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
+  <div class="d-flex flex-column flex-md-row h-100">
+    <div class="col-sm-12 col-md-3 h-100">
+      <div class=" w-100 collapse show d-md-flex pt-2 pl-0 min-vh-100 position-menu" id="sidebar">
+        <ul class="nav nav-pills flex-column flex-nowrap overflow-hidden">
+          <li class="nav-item">
+            <a class="nav-link collapsed text-truncate" href="#gpmenu" data-toggle="collapse"
+              data-target="#gpmenu">Gerente de Projeto</a>
+            <div class="collapse" id="gpmenu" aria-expanded="false">
+              <ul class="flex-column  pl-2 nav">
+                <li class="nav-item"><a class="nav-link py-0" href="#gp-descricao"><span>Descriçāo</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#gp-artefatos"><span>Artefatos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#gp-fluxos"><span>Fluxos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#gp-ferramentas"><span>Ferramentas</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed text-truncate" href="#armenu" data-toggle="collapse"
+              data-target="#armenu">Analista de Requisitos</a>
+            <div class="collapse" id="armenu" aria-expanded="false">
+              <ul class="flex-column  pl-2 nav">
+                <li class="nav-item"><a class="nav-link py-0" href="#ar-descricao"><span>Descriçāo</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#ar-artefatos"><span>Artefatos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#ar-fluxos"><span>Fluxos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#ar-ferramentas"><span>Ferramentas</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed text-truncate" href="#demenu" data-toggle="collapse"
+              data-target="#demenu">Designer</a>
+            <div class="collapse" id="demenu" aria-expanded="false">
+              <ul class="flex-column  pl-2 nav">
+                <li class="nav-item"><a class="nav-link py-0" href="#de-descricao"><span>Descriçāo</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#de-artefatos"><span>Artefatos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#de-fluxos"><span>Fluxos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#de-ferramentas"><span>Ferramentas</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed text-truncate" href="#devmenu" data-toggle="collapse"
+              data-target="#devmenu">Desenvolvedor</a>
+            <div class="collapse" id="devmenu" aria-expanded="false">
+              <ul class="flex-column  pl-2 nav">
+                <li class="nav-item"><a class="nav-link py-0" href="#dev-descricao"><span>Descriçāo</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#dev-artefatos"><span>Artefatos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#dev-fluxos"><span>Fluxos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#dev-ferramentas"><span>Ferramentas</span></a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed text-truncate" href="#atmenu" data-toggle="collapse"
+              data-target="#atmenu">Analista de Teste</a>
+            <div class="collapse" id="atmenu" aria-expanded="false">
+              <ul class="flex-column  pl-2 nav">
+                <li class="nav-item"><a class="nav-link py-0" href="#at-descricao"><span>Descriçāo</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#at-artefatos"><span>Artefatos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#at-fluxos"><span>Fluxos</span></a></li>
+                <li class="nav-item"><a class="nav-link py-0" href="#at-ferramentas"><span>Ferramentas</span></a></li>
+              </ul>
+            </div>
+          </li>
 
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-9 bg-text alturaParaTexto">
+      <section id="gp" class="section pt-4 mb-5">
+        <div class="container-fluid px-3 px-md-0">
+          <div >
+            <div class="col-md-12 mb-4">
+              <h2>Gerente de Projeto</h2>
+            </div>
+            <div id="gp-descricao" class="col-md-12 mb-4">
+              <h4>Descriçāo do Papel </h4>
+              <div class="row">
+                <div class="col-12">
+                  <p>Um Coordenador de Projetos aplica o conhecimento, as habilidades, as ferramentas e as técnicas de
+                    gerenciamento de projeto a uma ampla variedade de tarefas para atender aos requisitos e entregar um
+                    resultado final para um projeto específico.Essa função planeja, gerencia e aloca recursos, ajusta as
+                    prioridades, coordena interações com clientes e usuários e mantém a equipe do projeto concentrada. O
+                    Coordenador de Projetos também estabelece um conjunto de práticas que asseguram a integridade e a
+                    qualidade dos produtos de trabalho do projeto.</p>
+                </div>
+                <div class="col-12">
+                  <h6>Habilidades</h6>
+                  <p>As habilidades a seguir s&atilde;o recomendadas para preencher a fun&ccedil;&atilde;o
+                    de&nbsp;Coordenador de Projetos:</p>
+                  <ul>
+                    <li>
+                      <p>experi&ecirc;ncia no ciclo de vida de desenvolvimento do software, o dom&iacute;nio do
+                        aplicativo e plataforma</p>
+                    </li>
+                    <li>
+                      <p>estimativa do escopo, planejamento, gerenciamento do tempo, planejamento, custo do projeto e
+                        gerenciamento do or&ccedil;amento</p>
+                    </li>
+                    <li>
+                      <p>planejamento de recursos, gerenciamento de recursos e aquisi&ccedil;&atilde;o</p>
+                    </li>
+                    <li>
+                      <p>habilidades de an&aacute;lise de risco, de depend&ecirc;ncias e de an&aacute;lise de
+                        decis&atilde;o</p>
+                    </li>
+                    <li>
+                      <p>habilidades de apresenta&ccedil;&atilde;o, de comunica&ccedil;&atilde;o e de
+                        negocia&ccedil;&atilde;o</p>
+                    </li>
+                    <li>
+                      <p>experi&ecirc;ncia no Gerenciamento de Projeto</p>
+                    </li>
+                    <li>
+                      <p>capacidades de lideran&ccedil;a e de constru&ccedil;&atilde;o de equipe</p>
+                    </li>
+                    <li>
+                      <p>resolu&ccedil;&atilde;o de conflitos, habilidades de resolu&ccedil;&atilde;o de problemas e a
+                        capacidade de tomar decis&otilde;es confi&aacute;veis sob press&atilde;o</p>
+                    </li>
+                    <li>
+                      <p>gerenciamento baseado em produtos entregues, com foco na agrega&ccedil;&atilde;o de valor ao
+                        cliente, na forma de software de execu&ccedil;&atilde;o que atenda (ou ultrapasse) as
+                        necessidades do cliente.</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-12">
+                  <h6>Abordagens da Designaçāo</h6>
+
+                  <p>Para projetos menores, uma &uacute;nica pessoa pode agir como coordenador de projeto e
+                    tamb&eacute;m assumir uma fun&ccedil;&atilde;o de desenvolvimento, como um arquiteto de software. No
+                    entanto, se for poss&iacute;vel, geralmente &eacute; melhor para o coordenador de projeto evitar
+                    assumir responsabilidades de desenvolvimento para assegurar que a press&atilde;o do tempo sobre as
+                    responsabilidades de gerenciamento n&atilde;o prejudique as tarefas de desenvolvimento e vice-versa.
+                  </p>
+
+                  <p>Geralmente, a fun&ccedil;&atilde;o de coordenador de projeto pode ser combinada com &ecirc;xito com
+                    outras fun&ccedil;&otilde;es do tipo de gerenciamento, como Gerenciador de Controle de
+                    Mudan&ccedil;as, Gerenciador de Implementa&ccedil;&atilde;o e Engenheiro de Processos.</p>
+
+                  <p>O coordenador de projeto pode requerer suporte para tarefas, como a reuni&atilde;o de
+                    informa&ccedil;&otilde;es de status do projeto, gera&ccedil;&atilde;o de m&eacute;tricas e
+                    prepara&ccedil;&atilde;o de relat&oacute;rios. Ao criar a equipe do projeto, pense em incluir equipe
+                    de suporte para ajudar com essas tarefas.</p>
+
+                </div>
+              </div>
+
+            </div>
+            <div id="gp-artefatos" class="col-md-12 mb-4">
+              <h4>Artefatos</h4>
+              <div class="row">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                      <div class="card mb-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Avaliação de Iteração</h5>
+                          <p class="card-text">
+                            A Avaliação de Iteração captura o resultado de uma iteração, até que ponto os critérios de
+                            avaliação foram respeitados, as lições aprendidas e as mudanças que devem ser feitas.
+                            Cada iteração é concluída por uma Avaliação de Iteração,na qual a organização de
+                            desenvolvimento pausa para refletir sobre o que aconteceu, o que foi ou não atingido e por
+                            quê e as lições aprendidas.
+                          </p>
+                          <a href="/assets/download/rup_itass.dot" download class="btn btn-info w-100">
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                            Baixar Modelo
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                      <div class="card mb-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Caso de Negócio</h5>
+                          <p class="card-text">
+                            Esse artefato fornece as informações necessárias, de um ponto de vista de negócios, para
+                            determinar se compensa, ou não, investir no projeto. Para um produto de software comercial,
+                            o Caso de Negócio deve incluir um conjunto de suposições sobre o projeto e a ordem de
+                            importância do ROI (retorno do investimento) se essas suposições forem verdadeiras. Por
+                            exemplo, o retorno do investimento terá importância cinco, se concluído em um ano, dois, se
+                            concluído em dois anos, e um número negativo, após esse tempo. Essas suposições são
+                            verificadas novamente no fim da fase de Elaboração, quando o escopo e o plano estiverem
+                            definidos com mais exatidão.
+                          </p>
+                          <a href="/assets/download/rup_buscs.dot" download class="btn btn-info w-100">
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                            Baixar Modelo
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                      <div class="card mb-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Lista de Riscos</h5>
+                          <p class="card-text">
+                            Esse artefato é uma lista de riscos conhecidos e importantes para o projeto, classificada em
+                            ordem decrescente de importância e associada a ações específicas de contingência ou resposta
+                            a riscos.A Lista de Riscos identifica, em ordem decrescente de prioridade, os eventos que
+                            poderiam levar a um resultado positivo ou negativo significativo. Isso serve como ponto
+                            focal para atividades do projeto e é a base para a organização das iterações.
+                          </p>
+                          <a href="/assets/download/rup_rsklst.dot" download class="btn btn-info w-100">
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                            Baixar Modelo
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="gp-fluxos" class="col-md-12 mb-4">
+              <h4>Fluxos</h4>
+              <div class="row">
+                <div class="col-12">
+                  <a class="zoom"
+                    href="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_project_manager_363CE680.jpg"
+                    data-toggle="lightbox" data-title="Fluxo de Trabalho Gerente de Projeto" data-footer="">
+                    <img src="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_project_manager_363CE680.jpg"
+                      class="img-fluid">
+                  </a>
+
+                  <!-- <img src="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_project_manager_363CE680.jpg" class="img-fluid" alt="Responsive image"> -->
+                </div>
+              </div>
+            </div>
+            <div id="gp-ferramentas" class="col-md-12 mb-4">
+              <h4>Ferramentas</h4>
+              <div class="row">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                      <div class="card mb-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Microsoft Project
+                          </h5>
+                          <p class="card-text">
+                            O Microsoft Project é o software de maior aceitação mundial para Gerenciamento de Projetos
+                            por sua facilidade de utilização e versatilidade de aplicação. A utilização do MS Project é
+                            fundamental para garantir o sucesso do planejamento e execução dos projetos.Através de sua
+                            aplicação, gestores conseguem gerenciar recursos, avaliar orçamentos, criar cronogramas,
+                            medir o desempenho, analisar oportunidades e avaliar riscos. Com a correta utilização deste
+                            software, você tem controle total sobre seus projetos e fica preparado para tomar decisões
+                            estratégicas.
+                          </p>
+                          <a href="https://www.microsoft.com/pt-br/microsoft-365/project/project-management-software"
+                            target="_blank" class="btn btn-primary w-100">Acessar Link Externo</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                      <div class="card mb-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Trello</h5>
+                          <p class="card-text">
+                            O Trello é a ferramenta visual que possibilita ao time o gerenciamento de qualquer tipo de
+                            projeto, fluxo de trabalho ou monitoramento de tarefas. Adicione arquivos, checklists ou até
+                            mesmo automação: personalize tudo para que o time trabalhe melhor.
+                          </p>
+                          <a href="https://trello.com" target="_blank" class="btn btn-primary w-100">Acessar Link
+                            Externo</a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section id="ar" class="section pt-4 mb-5">
+        <div class="container-fluid px-3 px-md-0">
+        <div >
+          <div class="col-md-12 mb-4">
+            <h2>Analista de Requisitos</h2>
+          </div>
+          <div id="ar-descricao" class="col-md-12 mb-4">
+            <h4>Descriçāo do Papel </h4>
+            <div class="row">
+              <div class="col-12">
+                <p>Essa função especifica e mantém os requisitos detalhados do sistema.Normalmente, os diferentes
+                  aspectos dos requisitos são documentados em diferentes tipos de produtos de trabalho de requisitos
+                  de software e, como tal, os requisitos geralmente serão definidos em vários produtos de trabalho.
+                  Uma pessoa que desempenha essa função pode ser responsável por vários desses produtos de trabalho.
+                </p>
+              </div>
+              <div class="col-12">
+                <h6>Habilidades</h6>
+                <p>Uma pessoa que desempenha essa função precisa de boas habilidades de comunicação, seja para sua
+                  própria expressão verbal ou para a escrita. Ter conhecimento do domínio de negócios e da tecnologia
+                  também é importante, mas não é necessário para todos os membros da equipe do projeto que agem nessa
+                  função.Para que essa função seja executada eficientemente, a pessoa que desempenha essa função
+                  precisa estar familiarizada com as ferramentas de produtividade utilizadas para capturar os
+                  resultados do trabalho de requisitos.</p>
+                </li>
+                </ul>
+              </div>
+              <div class="col-12">
+                <h6>Abordagens da Designaçāo</h6>
+                <p>Essa fun&ccedil;&atilde;o pode ser designada das seguintes formas:</p>
+                <ul>
+                  <li><p>Designe um ou mais membros da equipe para desempenhar apenas essa fun&ccedil;&atilde;o. Isso
+                    funciona bem em equipes grandes, particularmente em situa&ccedil;&otilde;es nas quais existem
+                    especialistas em dom&iacute;nio dispon&iacute;veis com conhecimento significativo em
+                    dom&iacute;nio para especificar requisitos apropriados.</p></li>
+                  <li><p>Designe um ou mais membros da equipe para desempenhar&nbsp;essa fun&ccedil;&atilde;o&nbsp;e
+                    a&nbsp;Fun&ccedil;&atilde;o: Analista de Teste. Esta estrat&eacute;gia &eacute; uma boa
+                    op&ccedil;&atilde;o para equipes
+                    de teste de pequeno a m&eacute;dio porte e &eacute; utilizada freq&uuml;entemente onde houver
+                    especialistas em dom&iacute;nio dispon&iacute;veis para desempenhar ambas as
+                    fun&ccedil;&otilde;es. Tenha cuidado para destinar o esfor&ccedil;o apropriado ao atendimento das
+                    duas fun&ccedil;&otilde;es.</p></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div id="ar-artefatos" class="col-md-12 mb-4">
+            <h4>Artefatos</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Plano de Gerenciamento de Requisitos</h5>
+                        <p class="card-text">
+                          Esse artefato descreve os artefatos de requisitos, os tipos de requisitos e seus respectivos
+                          atributos de requisitos, especificando as informações a serem coletadas e os mecanismos de
+                          controle a serem utilizados para avaliar, relatar e controlar as mudanças feitas nos
+                          requisitos do produto.Um Plano de Gerenciamento de Requisitos deve ser desenvolvido para
+                          especificar as informações e os mecanismos de controle que serão coletados e utilizados para
+                          avaliar, relatar e controlar as mudanças feitas nos requisitos do produto.
+                        </p>
+                        <a href="/assets/download/rup_rmpln.dot" download class="btn btn-info w-100"><i
+                            class="fa fa-download" aria-hidden="true"></i>Baixar Modelo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Casos de Uso</h5>
+                        <p class="card-text">
+                          Esse artefato é um modelo das funções pretendidas do sistema e seu ambiente e serve como um
+                          contrato estabelecido entre o cliente e os desenvolvedores. É utilizado como fonte de
+                          informações essencial para atividades de análise, design e teste.
+                        </p>
+                        <a href="/assets/download/caso_de_uso.docx" download class="btn btn-info w-100"><i
+                            class="fa fa-download" aria-hidden="true"></i>Baixar Modelo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="ar-fluxos" class="col-md-12 mb-4">
+            <h4>Fluxos</h4>
+            <div class="row">
+              <div class="col-12">
+                <a class="zoom"
+                  href="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_requirement_specifier_A2500152.jpg"
+                  data-toggle="lightbox" data-title="Fluxo de Trabalho Gerente de Projeto" data-footer="">
+                  <img
+                    src="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_requirement_specifier_A2500152.jpg"
+                    class="img-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="ar-ferramentas" class="col-md-12 mb-4">
+            <h4>Ferramentas</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Wireframe
+                        </h5>
+                        <p class="card-text">
+                          Podemos definir wireframe como um esqueleto, um protótipo ou uma versão bastante primitiva do
+                          visual de um projeto. Ele consiste na representação da diagramação e das estruturas macro do
+                          site, ou seja, apresentamos por meio de formas geométricas e linhas como pensamos a divisão da
+                          interface em seções.
+                        </p>
+                        <a href="https://wireframe.cc/" target="_blank" class="btn btn-primary w-100">Acessar Link
+                          Externo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Documento de Visão </h5>
+                        <p class="card-text">
+                          O documento de visão define o escopo de alto nível e o propósito de um programa, produto ou
+                          projeto. Uma instrução clara do problema, solução proposta e os recursos de alto nível do
+                          produto ajudam a estabelecer expectativas e a reduzir riscos. Este tópico fornece uma
+                          estrutura de tópicos de conteúdo potencial para o documento de visão.
+                        </p>
+                        <a href="https://www.cin.ufpe.br/~gta/rup-vc/index.htm" target="_blank"
+                          class="btn btn-primary w-100">Acessar Link
+                          Externo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <hr>
+      <section id="de" class="section pt-4 mb-5">
+        <div class="container-fluid px-3 px-md-0">
+        <div >
+          <div class="col-md-12 mb-4">
+            <h2>Designer</h2>
+          </div>
+          <div id="de-descricao" class="col-md-12 mb-4">
+            <h4>Descriçāo do Papel </h4>
+            <div class="row">
+              <div class="col-12">
+                <p>	
+                  Essa função cria ilustração de produtos que é inclusa como parte do pacote do produto.
+                  Para preencher a função de um Artista Gráfico, você deve ter conhecimentos no campo de design criativo. Também é necessário que você tenha conhecimento do processo de produção escolhido para este produto (por exemplo, se o processo inclui empacotar o produto para distribuição física ou disponibilizá-lo em um site da Web). Dado o contexto de comunicação empresa-para-cliente, é vantajoso ter alguma experiência nos campos de marketing e relações públicas.
+                </p>
+              </div>
+              <div class="col-12">
+                <h6>Habilidades</h6>
+                <p>A função de Artista Gráfico requer experiência ou, no mínimo, treinamento em arte gráfica. Uma pessoa que desempenha essa função precisa ter criatividade, conhecer os princípios de marketing e ter capacidade para atrair o interesse do consumidor.</p>
+                </li>
+                </ul>
+              </div>
+              <div class="col-12">
+                <h6>Abordagens da Designaçāo</h6>
+                <p>	
+                  A função de Artista Gráfico pode ser designada das seguintes formas:</p>
+                <ul>
+                  <li><p>Contrate para a função um consultor de artes gráficas especializado. Essa é uma abordagem comum para tratar dessas responsabilidades.</p></li>
+                  <li><p>Designe um (ou mais) membros da equipe para executar a função de Artista Gráfico. Visto que o trabalho gráfico é uma habilidade especializada, geralmente não é possível localizar membros da equipe com habilidades combinadas de desenvolvimento de software e de artes gráficas.</p></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div id="de-artefatos" class="col-md-12 mb-4">
+            <h4>Artefatos</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title"> Ilustração do Produto	</h5>
+                        <p class="card-text">
+                          Esse artefato consiste em um texto (especificações de impressão) e uma ilustração que será utilizada para a 'marca' do produto. A Ilustração do Produto pode aparecer no pacote físico ou em um site da Web.
+                        </p>
+                        <a href="/assets/download/ilustracao-tela.pdf" download class="btn btn-info w-100"><i
+                            class="fa fa-download" aria-hidden="true"></i>Baixar Modelo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="de-fluxos" class="col-md-12 mb-4">
+            <h4>Fluxos</h4>
+            <div class="row">
+              <div class="col-12">
+                <a class="zoom"
+                  href="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_graphic_artist_26D51BF1.jpg"
+                  data-toggle="lightbox" data-title="Fluxo de Trabalho Gerente de Projeto" data-footer="">
+                  <img
+                    src="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_graphic_artist_26D51BF1.jpg"
+                    class="img-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="de-ferramentas" class="col-md-12 mb-4">
+            <h4>Ferramentas</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">GIMP
+                        </h5>
+                        <p class="card-text">
+                          GIMP (acrônimo para GNU Image Manipulation Program) é um programa de código aberto voltado, essencialmente, para edição e criação de imagens raster e, em menor escala, para desenho vetorial. O software é repleto de recursos, de fácil uso e uma boa alternativa gratuita ao mais conhecido dos editores, o gigante Adobe Photoshop.
+                        </p>
+                        <a href="https://gimp.br.uptodown.com/windows" target="_blank" class="btn btn-primary w-100">Acessar Link
+                          Externo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Canvas</h5>
+                        <p class="card-text">
+                          Canva é uma plataforma de design gráfico que permite aos usuários criar gráficos de mídia social, apresentações, infográficos, pôsteres e outros conteúdos visuais. Está disponível online e em dispositivos móveis e integra milhões de imagens, fontes, modelos e ilustrações.
+                        </p>
+                        <a href="https://www.canva.com/pt_br" target="_blank"
+                          class="btn btn-primary w-100">Acessar Link
+                          Externo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <hr>
+      <section id="dev" class="section pt-4 mb-5">
+        <div class="container-fluid px-3 px-md-0">
+        <div >
+          <div class="col-md-12 mb-4">
+            <h2>Desenvolvedor </h2>
+          </div>
+          <div id="dev-descricao" class="col-md-12 mb-4">
+            <h4>Descriçāo do Papel </h4>
+            <div class="row">
+              <div class="col-12">
+                <p>	
+                  Essa função desenvolve componentes de software e executa o teste do desenvolvedor para integração em subsistemas maiores, de acordo com os padrões adotados para o projeto.A função de implementador é responsável por desenvolver e testar componentes de acordo com os padrões adotados para o projeto, para fins de integração com subsistemas maiores. Quando for necessário criar componentes de teste, como drivers ou stubs para oferecer suporte aos testes, o implementador também será responsável por desenvolver e testar os componentes de teste e os subsistemas correspondentes.
+                </p>
+              </div>
+              <div class="col-12">
+                <h6>Habilidades</h6>
+                <p>As habilidades e o conhecimento apropriados para o implementador incluem:</p>
+                <ul>
+                  <li><p>conhecimento do sistema ou do aplicativo que está em teste</p></li>
+                  <li><p>familiaridade com ferramentas utilizadas para testes e automatização de testes</p></li>
+                  <li><p>habilidades de programação</p></li>
+                </ul>
+                </li>
+                </ul>
+              </div>
+              <div class="col-12">
+                <h6>Abordagens da Designaçāo</h6>
+                <p>	
+                  A um implementador pode ser designada a responsabilidade pela implementação de uma parte estrutural do sistema (como uma classe ou subsistema de implementação) ou uma parte funcional do sistema, como uma realização ou recurso de caso de uso.
+                  É comum para uma pessoa agir como implementador e designer, assumindo as responsabilidades de ambas as funções.
+                  É possível que duas pessoas ajam como implementadoras para uma única parte do sistema, seja dividindo as responsabilidades entre si ou executando juntos as tarefas, como em uma abordagem de programação em par.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div id="dev-artefatos" class="col-md-12 mb-4">
+            <h4>Artefatos</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title"> Elemento de Implementação	</h5>
+                        <p class="card-text">
+                          Esses artefatos são as partes físicas que compõem uma implementação, incluindo arquivos e diretórios. Eles incluem arquivos de código do software (origem, binário ou executável), arquivos de dados e arquivos de documentação, como arquivos de ajuda on-line.
+                        </p>
+                        <a href="/assets/download/elemento-implementacao.pdf" download class="btn btn-info w-100"><i
+                            class="fa fa-download" aria-hidden="true"></i>Baixar Modelo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title"> Testes do Desenvolvedor	</h5>
+                        <p class="card-text">
+                          Esses artefatos são as partes físicas que compõem uma implementação, incluindo arquivos e diretórios. Eles incluem arquivos de código do software (origem, binário ou executável), arquivos de dados e arquivos de documentação, como arquivos de ajuda on-line.
+                        </p>
+                        <a href="/assets/download/teste-desenvolvedor.pdf" download class="btn btn-info w-100"><i
+                            class="fa fa-download" aria-hidden="true"></i>Baixar Modelo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="dev-fluxos" class="col-md-12 mb-4">
+            <h4>Fluxos</h4>
+            <div class="row">
+              <div class="col-12">
+                <a class="zoom"
+                  href="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_implementer_D145E819.jpg"
+                  data-toggle="lightbox" data-title="Fluxo de Trabalho Gerente de Projeto" data-footer="">
+                  <img
+                    src="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_implementer_D145E819.jpg"
+                    class="img-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="dev-ferramentas" class="col-md-12 mb-4">
+            <h4>Ferramentas</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Visual Studio Code 
+                        </h5>
+                        <p class="card-text">
+                          O Visual Studio Code (VS Code) é um editor de código de código aberto desenvolvido pela Microsoft. O VSCode atende uma quantidade enorme de projetos (ASP .NET, Node.js) e oferece suporte a mais de 30 linguagens de programação como JavaScript, C#, C++, PHP, Java, HTML, R, CSS, SQL, Markdown, TypeScript, LESS, SASS, JSON, XML e Python assim como muitos outros formatos de arquivos comuns.
+                        </p>
+                        <a href="https://code.visualstudio.com/" target="_blank" class="btn btn-primary w-100">Acessar Link
+                          Externo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Notepad++ </h5>
+                        <p class="card-text">
+                          Notepad++ é um pequeno e rápido editor de texto de código aberto, para Windows, que permite trabalhar com arquivos de textos simples e código-fonte de diversas linguagens de programação.
+                        </p>
+                        <a href="https://notepad-plus-plus.org/downloads/" target="_blank"
+                          class="btn btn-primary w-100">Acessar Link
+                          Externo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <hr>
+      <section id="at" class="section pt-4 mb-5">
+        <div class="container-fluid px-3 px-md-0">
+        <div >
+          <div class="col-md-12 mb-4">
+            <h2>Analista de Teste </h2>
+          </div>
+          <div id="at-descricao" class="col-md-12 mb-4">
+            <h4>Descriçāo do Papel </h4>
+            <div class="row">
+              <div class="col-12">
+                <p>	
+                  Essa função identifica e define os testes exigidos, monitora o processo de teste em detalhes e os resultados em cada ciclo de teste e avalia a qualidade geral. Essa função também representa os investidores que não têm representação direta ou regular no projeto.
+                  As funções organizam a responsabilidade de executar tarefas e desenvolver produtos de trabalho em grupos lógicos. Cada função pode ser designada a uma ou mais pessoas e cada pessoa pode desempenhar uma ou mais funções. Ao criar a função de Analista de Teste, você deve considerar as habilidades exigidas para a função e as diferentes abordagens que podem ser feitas para designar a equipe à  função.
+                  Em algumas culturas em desenvolvimento, essa função é referida como Designer de Teste ou considerada uma especialização da função de Testador.
+                </p>
+              </div>
+              <div class="col-12">
+                <h6>Habilidades</h6>
+                <p>As habilidades e o conhecimento apropriados para o implementador incluem:</p>
+                <p>As habilidades e o conhecimento exigidos para a fun&ccedil;&atilde;o de&nbsp; Analista de Teste &nbsp;incluem:</p>
+                <ul>
+                  <li>boas habilidades anal&iacute;ticas</li>
+                  <li>disposi&ccedil;&atilde;o para desafios e gosto pela pesquisa</li>
+                  <li>aten&ccedil;&atilde;o a detalhes e tenacidade</li>
+                  <li>conhecimento de falhas e erros comuns de software</li>
+                  <li>conhecimento do dom&iacute;nio (altamente desej&aacute;vel)</li>
+                  <li>conhecimento do sistema ou do aplicativo em teste (altamente desej&aacute;vel)</li>
+                  <li>experi&ecirc;ncia em uma variedade de esfor&ccedil;os de teste (desej&aacute;vel)</li>
+                </ul>
+
+                <p>Essa fun&ccedil;&atilde;o &eacute; respons&aacute;vel principalmente por:</p>
+
+                <ul>
+                  <li>Identificar os Itens de Teste-alvo a serem avaliados pelo esfor&ccedil;o de teste</li>
+                  <li>Definir os testes apropriados necess&aacute;rios e quaisquer Dados de Teste associados</li>
+                  <li>Coletar e gerenciar os Dados de Teste</li>
+                  <li>Avaliar o resultado de cada ciclo de teste</li>
+                </ul>
+
+              </div>
+              <div class="col-12">
+                <h6>Abordagens da Designaçāo</h6>
+                <p>A fun&ccedil;&atilde;o de&nbsp;Analista de Teste&nbsp;pode ser designada das seguintes formas:</p>
+
+              <ul>
+                <li>Designe um ou mais membros da equipe para desempenhar as fun&ccedil;&otilde;es de&nbsp;Analista de Teste&nbsp;e Testador. Esta &eacute; uma abordagem adotada com freq&uuml;&ecirc;ncia, sendo especificamente adequada para equipes pequenas e equipes de teste de qualquer tamanho, formadas por um grupo experiente de Testadores com n&iacute;vel de experi&ecirc;ncia relativamente igual.</li>
+                <li>Designe um ou mais membros da equipe para desempenhar somente a fun&ccedil;&atilde;o de&nbsp;Analista de Teste. Esta abordagem funciona bem em equipes grandes, particularmente em situa&ccedil;&otilde;es nas quais existem especialistas do dom&iacute;nio com experi&ecirc;ncia m&iacute;nima em implementa&ccedil;&atilde;o de testes, mas que possuem um n&iacute;vel de conhecimento significativo do dom&iacute;nio para especificar os testes adequados e determinar os resultados apropriados para esses testes. Esta estrat&eacute;gia de designa&ccedil;&atilde;o de fun&ccedil;&otilde;es tamb&eacute;m pode ser utilizada para separar responsabilidades se algum membro da equipe de teste tiver experi&ecirc;ncia m&iacute;nima em automatiza&ccedil;&atilde;o de testes e, em virtude disso, apresentar dificuldade para desempenhar as fun&ccedil;&otilde;es de Testador e Designer de Teste.</li>
+                <li>Designe um membro da equipe para desempenhar as fun&ccedil;&otilde;es de&nbsp;Analista de Teste&nbsp;e Gerente de Teste. Esta estrat&eacute;gia &eacute; uma outra op&ccedil;&atilde;o para equipes de teste de pequeno a m&eacute;dio porte. Atente para que as min&uacute;cias da fun&ccedil;&atilde;o de&nbsp;Analista de Teste&nbsp;n&atilde;o afetem de modo adverso as responsabilidades da fun&ccedil;&atilde;o de Gerente de Teste. Para minimizar esse risco, designe tarefas de&nbsp;Analista de Teste&nbsp;menos cr&iacute;ticas a uma pessoa que desempenhe essas duas fun&ccedil;&otilde;es, deixando as tarefas mais importantes para os membros da equipe que n&atilde;o possuem nenhuma responsabilidade direta de gerenciamento.</li>
+                <li>Designe um ou mais membros da equipe para desempenhar as fun&ccedil;&otilde;es de&nbsp;Analista de Teste&nbsp;e Especificador de Requisitos. Esta estrat&eacute;gia &eacute; uma outra op&ccedil;&atilde;o para equipes de teste de pequeno a m&eacute;dio porte e geralmente &eacute; utilizada quando existem especialistas do dom&iacute;nio dispon&iacute;veis para desempenhar ambas as fun&ccedil;&otilde;es. Tenha cuidado para destinar o esfor&ccedil;o apropriado ao atendimento das duas fun&ccedil;&otilde;es.</li>
+              </ul>
+
+              <p>Observe tamb&eacute;m que os requisitos de habilidades espec&iacute;ficas variam de acordo com o tipo de teste a ser realizado. Por exemplo, as habilidades necess&aacute;rias para analisar corretamente os requisitos de teste de carregamento do sistema s&atilde;o diferentes daquelas necess&aacute;rias para analisar os requisitos de teste funcionais do sistema.</p>
+
+              </div>
+            </div>
+
+          </div>
+          <div id="at-artefatos" class="col-md-12 mb-4">
+            <h4>Artefatos</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Plano de Teste	
+                        </h5>
+                        <p class="card-text">
+                          Esse artefato define as metas e os objetivos dos testes no escopo da iteração (ou projeto), os itens de destino, a abordagem adotada, os recursos necessários e os produtos que serão liberados.
+                        </p>
+                        <a href="/assets/download/rup_tstpln_mstr.dot" download class="btn btn-info w-100">
+                          <i class="fa fa-download" aria-hidden="true"></i>
+                          Baixar Modelo
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Caso de Teste</h5>
+                        <p class="card-text">
+                          Esse artefato define um conjunto de entradas de teste, condições de execução e resultados esperados, identificados para a finalidade de fazer uma avaliação de algum aspecto específico de um Item de Teste de Destino.
+                        </p>
+                        <a href="/assets/download/caso-de-teste.pdf" download class="btn btn-info w-100">
+                          <i class="fa fa-download" aria-hidden="true"></i>
+                          Baixar Modelo
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="at-fluxos" class="col-md-12 mb-4">
+            <h4>Fluxos</h4>
+            <div class="row">
+              <div class="col-12">
+                <a class="zoom"
+                  href="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_test_analyst_4637F9F0.jpg"
+                  data-toggle="lightbox" data-title="Fluxo de Trabalho Gerente de Projeto" data-footer="">
+                  <img
+                    src="https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/roles/rup_test_analyst_4637F9F0.jpg"
+                    class="img-fluid">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="at-ferramentas" class="col-md-12 mb-4">
+            <h4>Ferramentas</h4>
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">TestingWhiz 
+                        </h5>
+                        <p class="card-text">
+                          TestingWhiz é uma ferramenta de automação de teste sem código para testes funcionais, de regressão e de banco de dados de seus aplicativos da Web, móveis e baseados em nuvem. É uma Ferramenta de Automação de Teste, que pode executar testes de ponta a ponta, como Funcional, Regressão, Banco de Dados, Big Data, UI da Web, Teste de Navegador Cruzado e Execução Distribuída para Aplicativos da Web, Móveis e Nuvem.
+                        </p>
+                        <a href="https://sourceforge.net/projects/testingwhiz-community-edition/
+                        " target="_blank" class="btn btn-primary w-100">Acessar Link
+                          Externo</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-4">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Selenium 
+                        </h5>
+                        <p class="card-text">
+                          Selenium é um conjunto de ferramentas de código aberto multiplataforma, usado para testar aplicações web pelo browser de forma automatizada. Ele executa testes de funcionalidades da aplicação web e testes de compatibilidade entre browser e plataformas diferentes. O Selenium suporta diversas linguagens de programação, como por exemplo C#, Java e Python, e vários navegadores web como o Chrome e o Firefox.
+                        </p>
+                        <a href="https://www.selenium.dev/" target="_blank"
+                          class="btn btn-primary w-100">Acessar Link
+                          Externo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  </div>
+  <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top " role="button"><i class="fa fa-chevron-up"></i></a>
+  <script>
+    $(".nav .nav-link").on("click", function () {
+      $(".nav").find(".active").removeClass("active");
+      $(this).addClass("active");
+    });
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $('#back-to-top').fadeIn();
+        } else {
+          $('#back-to-top').fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $('#back-to-top').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 400);
+        return false;
+      });
+    });
+  </script>
 </body>
+
 </html>
